@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <string.h> 
+#include <string.h>
 
 /**
  * main - Entry point
@@ -10,6 +10,7 @@ int main(void)
 {
 	const char *m = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 	int length = strlen(m);
+
 	write(STDERR_FILENO, m, length);
 	write(STDERR_FILENO, "\n", 1);
 	return (1);
