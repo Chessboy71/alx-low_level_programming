@@ -16,12 +16,12 @@ int main(void)
 	{
 		for (m = n + 1; m < 57; m++)
 		{
-			for(o = m + 1; o <= 57; o++)
-			{	
+			for (o = m + 1; o <= 57; o++)
+			{
 			putchar((char)n);
 			putchar((char)m);
 			putchar((char)o);
-				if (n != 55 || m != 56 || 0 != 57)
+				if (n != 55 || m != 56 || o != 57)
 				{
 				putchar(',');
 				putchar(' ');
