@@ -1,5 +1,5 @@
-#include "main.h";
-
+#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -8,11 +8,8 @@
  */
 int main(void)
 {
-	int i;
 	char word[8] = "_putchar";
-
-	for (i = 0; i < 8; i++)
+	for (int i=0; i < 8; i++ )
 		_putchar(word[i]);
-
-	return (0);
+	return 0;
 }
