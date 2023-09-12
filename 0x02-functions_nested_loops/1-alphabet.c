@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * Prints the alphabets
+ * print_alphabet - "prints the alphabet"
+ * void
  *
  * Return: Always 0 (Success)
  */
