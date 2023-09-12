@@ -2,16 +2,15 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * Prints the alphabets
  *
  * Return: Always 0 (Success)
  */
-void main(void)
+void print_alphabet(void)
 {
 	char i;
 
 	for (i = 'a'; i <= 'z'; i++)
-	{
 		_putchar(i);
-	}
+	_putchar('\n');
 }
