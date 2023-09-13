@@ -1,17 +1,25 @@
 #include <stdio.h>
-/*
+
+/**
+ * main - Entry point
  *
- * main - main code
+ * Description: 'the program's description'
  *
- * */
-int main() {
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
 	int sum = 0;
 	int i;
-	for (i = 0; i < 1024; i++) {
-		if (i % 3 == 0 || i % 5 == 0) {
+
+	for (i = 0; i < 1024; i++)
+	{
+		if (i % 3 == 0 || i % 5 == 0)
+		{
 			sum += i;
 		}
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
