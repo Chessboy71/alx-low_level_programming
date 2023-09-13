@@ -10,8 +10,9 @@
 
 int main(void)
 {
-	long int fib[];
+	long int fib[100];
 	int i = 0;
+	long int sum = 0;
 
 	fib[0] = 1;
 	fib[1] = 2;
