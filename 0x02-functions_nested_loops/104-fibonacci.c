@@ -12,19 +12,19 @@ int main(void)
 {
 	long int fib;
 	int i;
-	int num;
-	int numm;
+	long int num;
+	long int numm;
 
 
 	num = 1;
-	printf("%d\n", num);
+	printf("%ld\n", num);
 	numm = 2;
-	printf("%d\n", numm);
+	printf("%ld\n", numm);
 
 	for (i = 3; i <= 98; i++)
 	{
 		fib = num + numm;
-		printf("%ld\n", fib);
+		printf("%ld, ", fib);
 		numm = fib;
 		num = numm;
 	}
