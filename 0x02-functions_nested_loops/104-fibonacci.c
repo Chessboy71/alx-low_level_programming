@@ -25,8 +25,8 @@ int main(void)
 	{
 		fib = num + numm;
 		printf("%ld\n", fib);
-		numm = fib; 
-		num = num;
+		numm = fib;
+		num = numm;
 	}
 	return (0);
 }
