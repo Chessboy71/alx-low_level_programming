@@ -16,13 +16,13 @@ int main(void)
 
 
 	num = 1;
-	printf("%uld, ", num);
+	printf("%lu, ", num);
 	numm = 2;
-	printf("%uld, ", numm);
+	printf("%lu, ", numm);
 
 	for (i = 3; i <= 98; i++)
 	{
-		printf("%ld, ", num + numm);
+		printf("%lu, ", num + numm);
 		numm = num + numm;
 		num = numm - num;
 	}
