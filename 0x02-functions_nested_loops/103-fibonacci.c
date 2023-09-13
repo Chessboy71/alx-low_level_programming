@@ -12,7 +12,7 @@ int main(void)
 {
 	long int fib[100];
 	int i = 2;
-	long int sum = 0;
+	long int sum = 2;
 
 	fib[0] = 1;
 	fib[1] = 2;
