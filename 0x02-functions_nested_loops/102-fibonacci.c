@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	long long int fib[50];
+	long int fib[50];
 	int i;
 
 	fib[0] = 1;
