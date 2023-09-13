@@ -10,18 +10,23 @@
 
 int main(void)
 {
-	long int fib[97];
+	long int fib;
 	int i;
+	int num;
+	int numm;
 
-	fib[0] = 1;
-	printf("%ld\n", fib[0]);
-	fib[1] = 2;
-	printf("%ld\n", fib[0]);
 
-	for (i = 2; i < 98; i++)
+	num = 1;
+	printf("%ld\n", num);
+	numm = 2;
+	printf("%ld\n", numm);
+
+	for (i = 3; i <= 98; i++)
 	{
-		fib[i] = fib[i - 1] + fib[i - 2];
-		printf("%ld\n", fib[i]);
+		fib = num + numm;
+		printf("%ld\n", fib);
+		numm = fib; 
+		num = num;
 	}
 	return (0);
 }
