@@ -23,7 +23,7 @@ int main(void)
 	}
 	for (i = 0; i < 50; i++)
 	{
-		printf("%lld", fib[i]);
+		printf("%ld", fib[i]);
 
 		if (i < 49)
 		{
