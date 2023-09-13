@@ -22,11 +22,14 @@ void times_table(void)
 			_putchar(' ');
 			_putchar(' ');
 			}
+			else 
+			{
 			_putchar('0' + (int)(j * i / 10));
 			_putchar('0' + (j * i) % 10);
 			_putchar(',');
 			_putchar(' ');
 			_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
