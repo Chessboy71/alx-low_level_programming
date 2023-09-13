@@ -11,18 +11,17 @@
 int main(void)
 {
 	long int fib[97];
-	int i = 2;
+	int i;
 
 	fib[0] = 1;
 	printf("%ld\n", fib[0]);
 	fib[1] = 2;
 	printf("%ld\n", fib[0]);
 
-	while (i < 98)
+	for (i = 2; i < 98; i++)
 	{
 		fib[i] = fib[i - 1] + fib[i - 2];
 		printf("%ld\n", fib[i]);
-		i++;
 	}
 	return (0);
 }
