@@ -11,8 +11,8 @@
 int main(void)
 {
 	int i;
-	long unsigned int num;
-	long unsigned int numm;
+	unsigned long int num;
+	unsigned long int numm;
 
 
 	num = 1;
@@ -20,7 +20,7 @@ int main(void)
 	numm = 2;
 	printf("%ld, ", numm);
 
-	for (i = 3; i <= 90; i++)
+	for (i = 3; i <= 98; i++)
 	{
 		printf("%ld, ", num + numm);
 		numm = num + numm;
