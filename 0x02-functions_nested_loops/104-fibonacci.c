@@ -21,7 +21,7 @@ int main(void)
 	while (i < 98)
 	{
 		fib[i] = fib[i - 1] + fib[i - 2];
-		printf("%ld\n", fib[i])
+		printf("%ld\n", fib[i]);
 	}
 	return (0);
 }
