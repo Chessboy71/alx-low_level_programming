@@ -17,9 +17,9 @@ int main(void)
 
 
 	num = 1;
-	printf("%ld\n", num);
+	printf("%d\n", num);
 	numm = 2;
-	printf("%ld\n", numm);
+	printf("%d\n", numm);
 
 	for (i = 3; i <= 98; i++)
 	{
