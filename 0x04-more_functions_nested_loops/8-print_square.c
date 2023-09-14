@@ -20,6 +20,6 @@ void print_square(int n)
 			_putchar(' ');
 		_putchar('#');
 		_putchar('\n');
-		i--	
+		i--;	
 	}
 }
