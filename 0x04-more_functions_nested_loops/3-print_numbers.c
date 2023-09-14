@@ -8,8 +8,8 @@
  * Return: Always 0 (Success)
 */
 void print_numbers(void)
-{	
-	int i; 
+{
+	int i;
 
 	for (i = 48; i < 58; i++)
 	{
