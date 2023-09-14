@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * mul - prints the alphabet ten times
+ * print_numbers - prints the alphabet ten times
  *
  *
  * Return: Always 0 (Success)
