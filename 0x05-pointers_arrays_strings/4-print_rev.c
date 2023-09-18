@@ -21,7 +21,7 @@ void print_rev(char *s)
 	};
 	for (i = 0; i < n; i++)
 	{
-		_putchar(*(s + n - i -1));
+		_putchar(*(s + n - i - 1));
 	}
 	_putchar('\n');
 }
