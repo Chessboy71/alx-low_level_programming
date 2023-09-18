@@ -1,2 +1,0 @@
-#!/bin/bash
-gcc -c $cfile -o ${cfile%.c}.o
