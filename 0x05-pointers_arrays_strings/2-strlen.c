@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _puts - check the code
+ * _strlen - gives the length
  * @str : A string
  *
  * Return: Always 0.
