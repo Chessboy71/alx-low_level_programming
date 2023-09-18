@@ -20,23 +20,22 @@ void puts_half(char *str)
 		n++;
 		p++;
 	}
-    
-    m = (n - 1) / 2;
-    
-	if (n % 2 == 0){
-	    for (i = 0; i < m ; i++)
-	    {
-		putchar(*(str + n - m - 1));
-		str++;
-	    }
+	m = (n - 1) / 2;
+	if (n % 2 == 0)
+	{
+		for (i = 0; i < m ; i++)
+		{
+			putchar(*(str + n - m - 1));
+			str++;
+		}
 	}
 	else
 	{
-	    for (i = 0; i < m ; i++)
-	    {
-		putchar(*(str + n - m));
-		str++;
-	    }
+		for (i = 0; i < m ; i++)
+		{
+			putchar(*(str + n - m));
+			str++;
+			}
 	}
 	if (*(str + m + 1) != '\0')
 	{
