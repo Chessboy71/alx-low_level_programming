@@ -3,12 +3,12 @@
 
 /**
  * _puts - check the code
- *@str : A string 
+ * @str : A string 
  *
  * Return: Always 0.
  */
 
-void _puts(char *str)
+int _strlen(char *str)
 {
 	int n = 0;
 	char *p = str;
