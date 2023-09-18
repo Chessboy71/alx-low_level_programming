@@ -20,8 +20,11 @@ void rev_string(char *s)
 		n++;
 		p++;
 	}
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n / 2; i++)
 	{
-		*s = us[n - i - 1];
+		char temp = *(s + i);
+		*(s + i) = *(us + n - i - 1);
+		*(us + n - i - 1) = temp;
+
 	}
 }
