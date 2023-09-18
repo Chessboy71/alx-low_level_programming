@@ -19,15 +19,28 @@ void puts_half(char *str)
 		n++;
 		p++;
 	}
-
-	for (i = 0; i <= n / 2; i++)
-	{
-		_putchar(*(str + n / 2 - 1));
+    
+    int m = (n - 1) / 2;
+    
+	if (n % 2 == 0){
+	    for (i = 0; i < m ; i++)
+	    {
+		putchar(*(str + n - m - 1));
 		str++;
+	    }
 	}
-	if (*str != '\0')
+	else
 	{
-		_putchar(*(str + n / 2 - 1));
+	    for (i = 0; i < m ; i++)
+	    {
+		putchar(*(str + n - m));
+		str++;
+	    }
 	}
-	_putchar('\n');
+	if (*(str + m + 1) != '\0')
+	{
+		putchar(*(str + m + 1));
+	}
+	putchar('\n');
 }
+
