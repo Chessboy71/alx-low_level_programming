@@ -27,7 +27,7 @@ void puts_half(char *str)
 	}
 	if (*str != '\0')
 	{
-		_putchar(*str);
+		_putchar(*(str + n / 2 - 1));
 	}
 	_putchar('\n');
 }
