@@ -15,4 +15,5 @@ int main(void)
         putchar(c);
     }
     putchar(2772 - c);
+    return (0);
 }
