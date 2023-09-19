@@ -11,7 +11,7 @@
 int _atoi(char *s)
 {
 	int r = 0;
-	long sign;
+	int sign;
 
 	while (*s == ' ')
 	{
