@@ -39,7 +39,7 @@ void print_number(int n)
 
 void print_array(int *a, int n)
 {
-	int i; 
+	int i;
 
 	for (i = 0; i < n; i++)
 	{
@@ -50,6 +50,7 @@ void print_array(int *a, int n)
 			_putchar(' ');
 		}
 	}
+	_putchar('\n');
 }
 
 
