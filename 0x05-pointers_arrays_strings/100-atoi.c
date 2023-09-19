@@ -8,47 +8,25 @@
  * Return: Always 0.
  */
 
-#include <stdio.h>
-#include <limits.h>
-
 int _atoi(char *s)
 {
-	int result = 0;
+	unsigned int num = 0;
 	int sign = 1;
 
-	while (*s == ' ')
+	do 
 	{
-		s++;
-	}
-
-
-	if (*s == '-')
-	{
-		sign = -1;
-		s++;
-	}
-	else if (*s == '+')
-	{
-		s++;
-	}
-
-	while (*s >= '0' && *s <= '9')
-	{
-		int digit = *s - '0';
-
-		if (result > (INT_MAX - digit) / 10)
+		if (*s == '-')
 		{
-			if (sign == 1)
-			{
-				return (INT_MAX);
-			}
-			else
-			{
-				return (INT_MIN);
-			}
+			sign *= -1;
 		}
-		result = result * 10 + digit;
-		s++;
-	}
-	return (result * sign);
+		else if (*s >= '0' && *s <= '9' )
+		{
+			num = num * 10 + (*s - '0'); 
+		}
+		else
+		{
+			break;
+		}
+	} while (*s++ != '\0')
+	return (num * sign);
 }
