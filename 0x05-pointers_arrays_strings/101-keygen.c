@@ -2,7 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main()
+int main(void)
 {
-    return 0;
+    int sum; 
+    char c;
+    
+    srand(time(NULL));
+    while (sum <= 2645)
+    {
+        c = rand() % 128;
+        sum += c;
+        putchar(c);
+    }
+    putchar(2772 - c);
 }
