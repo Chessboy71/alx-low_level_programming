@@ -21,13 +21,15 @@ char generate_random_char()
 
 int main()
 {
+    int i;
+
     srand(time(NULL));
-    char password[PASSWORD_LENGTH + 1];
-    for (int i = 0; i < PASSWORD_LENGTH; i++)
+    char psw[PASSWORD_LENGTH + 1];
+    for (i = 0; i < PASSWORD_LENGTH; i++)
     {
-        password[i] = generate_random_char();
+        psw[i] = generate_random_char();
     }
-    password[PASSWORD_LENGTH] = '\0';
+    psw[PASSWORD_LENGTH] = '\0';
     printf("Generated password: %s\n", password);
 
     return 0;
