@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 /**
  * _atoi - check the code
@@ -10,6 +11,7 @@
 int _atoi(char *s)
 {
 	int r = 0;
+	int sign;
 
 	while (*s == ' ')
 	{
@@ -40,4 +42,5 @@ int _atoi(char *s)
 		r = r * 10 + (*s - '0');
 		s++;
 		}
-		return (r * sign); }
+		return (r * sign);
+		}
