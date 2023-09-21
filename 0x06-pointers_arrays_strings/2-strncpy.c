@@ -10,7 +10,6 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *original_dest = dest;
 	int i = 0;
 
 
