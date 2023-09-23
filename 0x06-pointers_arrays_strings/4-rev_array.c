@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
- *_strncpy - check the code
- *@dest : pointer to a character
- *@src : pointer to the source
- *@n : integer to specify the number of bits
+ *reverse_array - check the code
+ *@a : pointer to array
+ *@n : number of cases
  *Return: Always 0.
  */
 
-char *_strncpy(char *dest, char *src, int n)
-{
-	int i;
+void reverse_array(int *a, int n);
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	while (i < n)
+{
+	int i, j, t;
+
+	for (i = 0, j = n - 1; i < j; i++, j--)
 	{
-		dest[i] = '\0';
-		i++;
+		t = a[i];
+		a[i] = a[j];
+		a[j] = t;
 	}
-	return (dest);
 }
