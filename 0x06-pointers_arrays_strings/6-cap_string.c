@@ -26,8 +26,8 @@ int isDelimiter(char c)
 	{
 		if (c == delimiter[i])
 			return (1);
-		return (0);
 	}
+	return (0);
 }
 /**
  *cap_string - check the code
