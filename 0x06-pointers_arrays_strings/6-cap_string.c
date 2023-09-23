@@ -1,61 +1,58 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdbool.h> // Include the necessary header for using boolean type
 
 /**
- * isLower - check if the character is lowercase
- * @c: character
- * Return: true if the character is lowercase, false otherwise
+ *isLower - check if the string is loweCase
+ *@c : string
+ *Return: Always 0.
  */
-bool isLower(char c)
+
+int isLower(char c)
 {
-	return (c >= 'a' && c <= 'z');
+	return (c <= 122 && c >= 97);
 }
-
 /**
- * isDelimiter - check if the character is a delimiter
- * @c: character
- * Return: true if the character is a delimiter, false otherwise
+ *isDelimiter - check the code
+ *@c : string
+ *Return: Always 0.
  */
-bool isDelimiter(char c)
+
+int isDelimiter(char c)
 {
 	int i;
+	char delimiter[] = " ;\t\n,.!?\"(){}";
 
-	char delimiters[] = " \t\n,.!?\"(){}";
-	for (i = 0; delimiters[i] != '\0'; i++)
+	while (delimiter[i] != '\0')
 	{
-		if (c == delimiters[i])
-			return true;
+		if (c == delimiter[i])
+			return (1);
+		i++;
 	}
-	return false;
+	return (0);
 }
-
 /**
- * cap_string - capitalize the first letter of each word in a string
- * @str: input string
- * Return: Pointer to the modified string
+ *cap_string - check the code
+ *@str : string
+ *Return: Always 0.
  */
+
 char *cap_string(char *str)
 {
-	bool new_word = true;
-	int i;
+	char *s = str;
+	int delim = 1;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*s)
 	{
-		if (isDelimiter(str[i]))
+		if (isDelimiter(*s))
+			delim = 1;
+		else if (isLower(*s) && delim)
 		{
-			new_word = true;
-		}
-		else if (new_word && isLower(str[i]))
-		{
-			str[i] -= 32;
-			new_word = false;
+			*s -= 32;
+			delim = 0;
 		}
 		else
-		{
-			new_word = false;
-		}
+			delim = 0;
+		s++;
 	}
-
-	return str;
+	return (s);
 }
