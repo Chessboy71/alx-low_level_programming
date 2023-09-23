@@ -22,7 +22,7 @@ int isDelimiter(char c)
 	int i;
 	char delimiter[] = " ;\t\n,.!?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 14; i++)
 	{
 		if (c == delimiter[i])
 			return (1);
