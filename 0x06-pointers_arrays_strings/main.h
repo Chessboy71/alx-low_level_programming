@@ -8,3 +8,4 @@ char *cap_string(char *);
 int _putchar(char c);
 int isDelimiter(char c);
 int isLower(char c);
+void rev_string(char *n);
