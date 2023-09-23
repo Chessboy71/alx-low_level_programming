@@ -1,20 +1,56 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *reverse_array - check the code
- *@a : pointer to array
- *@n : number of cases
+ *isLower - check if the string is loweCase
+ *@c : string
  *Return: Always 0.
  */
 
-void reverse_array(int *a, int n)
+int isLower(char c)
 {
-	int i, j, t;
+	return (c <= 122 && c >= 97);
+}
+/**
+ *isDelimiter - check the code
+ *@c : string
+ *Return: Always 0.
+ */
 
-	for (i = 0, j = n - 1; i < j; i++, j--)
+int isDelimiter(char c)
+{
+	int i;
+	char delimiter[] = "\t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
 	{
-		t = a[i];
-		a[i] = a[j];
-		a[j] = t;
+		if (c == delimiter[i])
+			return (1);
+		return (0);
 	}
+}
+/**
+ *cap_string - check the code
+ *@str : string
+ *Return: Always 0.
+ */
+
+char *cap_string(char *str)
+{
+	char *s = str;
+	int delim = 1;
+
+	while (*s)
+	{
+		if (isDelimiter(*s))
+			delim = 1;
+		else if (isLower(*s) && delim)
+		{
+			*s -= 32;
+			delim = 0;
+		}
+		else
+			delim = 0;
+	}
+	return (s);
 }
