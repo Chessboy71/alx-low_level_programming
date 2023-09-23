@@ -38,8 +38,9 @@ bool isDelimiter(char c)
 char *cap_string(char *str)
 {
 	bool new_word = true;
+	int i;
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (isDelimiter(str[i]))
 		{
