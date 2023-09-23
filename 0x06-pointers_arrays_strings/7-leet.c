@@ -1,28 +1,24 @@
 #include "main.h"
-
 /**
- *leet - check the code
- *@str : pointer to array
- *Return: Always 0.
+ * leet - encode into 1337speak
+ * @n: input value
+ * Return: n value
  */
-
-char *leet(char *str)
+char *leet(char *n)
 {
-	char *cp = str;
-	char key[] = {'A', 'E', 'O', 'T', 'L'};
-	int value[] = {4, 3, 0, 7, 1};
-	unsigned int i;
+	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	while (*str)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		for (j = 0; j < 10; j++)
 		{
-			if (*str == key[i] || *str == key[i] + 32)
+			if (n[i] == s1[j])
 			{
-				*str = 48 + value[i];
+				n[i] = s2[j];
 			}
 		}
-		str++;
 	}
-	return (cp);
+	return (n);
 }
