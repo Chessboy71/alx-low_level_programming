@@ -19,8 +19,10 @@ bool isLower(char c)
  */
 bool isDelimiter(char c)
 {
+	int i;
+
 	char delimiters[] = " \t\n,.!?\"(){}";
-	for (int i = 0; delimiters[i] != '\0'; i++)
+	for (i = 0; delimiters[i] != '\0'; i++)
 	{
 		if (c == delimiters[i])
 			return true;
