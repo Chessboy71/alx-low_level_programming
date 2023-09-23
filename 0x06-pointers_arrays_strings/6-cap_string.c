@@ -1,66 +1,37 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- *isLower - check if the string is loweCase
- *@c : string
- *Return: Always 0.
+ * cap_string - Capitalizes all words of a string.
+ * @str: The string to be capitalized.
+ *
+ * Return: A pointer to the changed string.
  */
-
-int isLower(char c)
-{
-	return (c <= 'z' && c >= 'a');
-}
-/**
- *isDelimiter - check the code
- *@c : string
- *Return: Always 0.
- */
-
-int isDelimiter(char c)
-{
-	int i;
-	char delimiter[] = " \t\n\v\f\r,.!?\"(){}";
-
-	while (delimiter[i])
-	{
-		if (c == delimiter[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
-/**
- *cap_string - check the code
- *@str : string
- *Return: Always 0.
- */
-
 char *cap_string(char *str)
 {
-	char *s = str;
-	int delim = 1;
+	int index = 0;
 
-	while (*s != '\0')
+	while (str[index])
 	{
-		if (*s == ',' || *s == '.' || *s == '!' || *s == '?')
-			delim = 1;
-		else if ((isLower(*s) && delim))
-		{
-			*s -= 32;
-			delim = 0;
-		}
-		else if (*s == ' ' || *s == '\n' || *s == '\t')
-		{
-			delim = 1;
-		}
-		else if (*s == '(' || *s == ')' || *s == '{' || *s == '}')
-		{
-			delim = 1;
-		}
-		else
-			delim = 0;
-		s++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+			str[index - 1] == '\t' ||
+			str[index - 1] == '\n' ||
+			str[index - 1] == ',' ||
+			str[index - 1] == ';' ||
+			str[index - 1] == '.' ||
+			str[index - 1] == '!' ||
+			str[index - 1] == '?' ||
+			str[index - 1] == '"' ||
+			str[index - 1] == '(' ||
+			str[index - 1] == ')' ||
+			str[index - 1] == '{' ||
+			str[index - 1] == '}' ||
+			index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	return (s);
-}
+
+	return (str);

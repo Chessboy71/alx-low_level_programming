@@ -1,20 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *reverse_array - check the code
- *@a : pointer to array
- *@n : number of cases
- *Return: Always 0.
+ * rot13 - encoder rot13
+ * @s: pointer to string params
+ *
+ * Return: *s
  */
 
-void reverse_array(int *a, int n)
+char *rot13(char *s)
 {
-	int i, j, t;
+	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0, j = n - 1; i < j; i++, j--)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		t = a[i];
-		a[i] = a[j];
-		a[j] = t;
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
+		}
 	}
+	return (s);
 }
