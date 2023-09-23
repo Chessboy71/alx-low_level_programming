@@ -1,20 +1,27 @@
 #include "main.h"
 
 /**
- *reverse_array - check the code
- *@a : pointer to array
- *@n : number of cases
+ *leet - check the code
+ *@str : pointer to array
  *Return: Always 0.
  */
 
-void reverse_array(int *a, int n)
+char *leet(char *str)
 {
-	int i, j, t;
+	char *cp = str;
+	char key[] = {'A', 'E', 'O', 'T', 'L'};
+	int value[] = {4, 3, 0, 7, 1};
+	unsigned int i;
 
-	for (i = 0, j = n - 1; i < j; i++, j--)
+	while (*str)
 	{
-		t = a[i];
-		a[i] = a[j];
-		a[j] = t;
+		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		{
+			if (*c == key[i] || *c == key[i] + 32)
+			{
+				*c = 48 + value[i];
+			}
+		}
 	}
+	return (cp);
 }
