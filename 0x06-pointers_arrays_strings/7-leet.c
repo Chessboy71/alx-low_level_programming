@@ -22,6 +22,7 @@ char *leet(char *str)
 				*str = 48 + value[i];
 			}
 		}
+		str++;
 	}
 	return (cp);
 }
