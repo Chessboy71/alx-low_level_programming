@@ -43,7 +43,7 @@ char *cap_string(char *str)
 
 	while (*s != '\0')
 	{
-		if (isDelimiter(*s))
+		if (*s == ',' || *s == '.' || *s == '!' || *s == '?')
 			delim = 1;
 		else if ((isLower(*s) && delim))
 		{
@@ -51,6 +51,10 @@ char *cap_string(char *str)
 			delim = 0;
 		}
 		else if (*s == ' ' || *s == '\n' || *s == '\t')
+		{
+			delim = 1;
+		}
+		else if (*s == '(' || *s == ')' || *s == '{' || *s == '}')
 		{
 			delim = 1;
 		}
