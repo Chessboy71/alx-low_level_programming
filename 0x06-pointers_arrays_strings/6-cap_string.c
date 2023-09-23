@@ -51,6 +51,7 @@ char *cap_string(char *str)
 		}
 		else
 			delim = 0;
+		s++;
 	}
 	return (s);
 }
