@@ -9,7 +9,7 @@
 
 int isLower(char c)
 {
-	return (c <= 122 && c >= 97);
+	return (c <= 'z' && c >= 'a');
 }
 /**
  *isDelimiter - check the code
@@ -20,7 +20,7 @@ int isLower(char c)
 int isDelimiter(char c)
 {
 	int i;
-	char delimiter[] = " ;\t\n,.!?\"(){}";
+	char delimiter[] = " \t\n,.!?\"(){}";
 
 	while (delimiter[i] != '\0')
 	{
