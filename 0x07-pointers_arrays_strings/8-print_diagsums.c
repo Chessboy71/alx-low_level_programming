@@ -1,53 +1,26 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_number - a function that claculates and prints the sum of diagonal of a matrix
- * @n : integer
- *
- * Return: nothing
+ * print_diagsums - Entry point
+ * @a: input
+ * @size: input
+ * Return: Always 0 (Success)
  */
-void print_number(int n)
-{
-	if (n == 0)
-	{
-		_putchar('0');
-	}
-	else if (n < 0)
-	{
-		_putchar('-');
-		print_number(-n);
-	}
-	else
-	{
-		if (n / 10 != 0)
-		{
-			print_number(n / 10);
-		}
-		_putchar(((unsigned int)n % 10) + '0');
-	}
-}
-
-/**
- * print_diagsums - a function that claculates and prints the sum of diagonal of a matrix
- * @a : the board to print
- * @size : the size of the diagonal
- *
- * Return: nothing
- */
-
 void print_diagsums(int *a, int size)
 {
-	unsigned int d1;
-	unsigned int d2;
-	int i = 0;
-	while (i < size)
+	int s1, s2, y;
+
+	s1 = 0;
+	s2 = 0;
+	for (y = 0; y < size; y++)
 	{
-		d1 += a[i][i];
-		d2 += a[i][size - i];
+		s1 = s1 + a[y * size + y];
 	}
 
-	print_number(d1); 
-	_putchar (',');
-	_putchar(' ');
-	print_number(d2);
+	for (y = size - 1; y >= 0; y--)
+	{
+		s2 += a[y * size + (size - y - 1)];
+	}
+
+	printf("%d, %d\n", s1, s2);
 }
