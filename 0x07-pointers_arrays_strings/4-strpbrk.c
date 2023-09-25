@@ -1,24 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strspn - returns pointer to the first occurence of the string
+ * _strbrk - returns pointer to the first occurence of the string
  * @s : selected string
  * @accept : targeted character
  *
  * Return: pointer to destination
  */
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int i;
-	unsigned int j;
 
-	for (i = 0; s[i] != '\0'; i++)
+char *_strpbrk(char *s, char *accept)
+{
+	int j;
+
+	while (*s)
 	{
-		for (j = 0; accept[j] != s[i]; j++)
+		for (j = 0; accept[j]; j++)
 		{
-			if (accept[j] == '\0')
-				return (i);
+			if (*s == accept[j])
+				return (s);
 		}
+		s++;
 	}
-	return (i);
+
+	return ('\0');
 }
