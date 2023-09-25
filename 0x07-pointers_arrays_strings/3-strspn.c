@@ -7,14 +7,17 @@
  *
  * Return: pointer to destination
  */
-unsigned int *_strspn(char *s, char c)
+unsigned int *_strspn(char *s, char *accept)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; s[i] >= '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == c)
-			return (s + i);
+		for (j = 0; accept[j] != s[i]; i++)
+		{
+			if (accept[j] == '\0')
+				return (i);
+		}
 	}
-	return ('\0');
+	return (i);
 }
