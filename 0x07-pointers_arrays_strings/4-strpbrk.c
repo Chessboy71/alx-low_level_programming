@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strbrk - returns pointer to the first occurence of the string
+ * _strpbrk - returns pointer to the first occurence of the string
  * @s : selected string
  * @accept : targeted character
  *
