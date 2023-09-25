@@ -7,7 +7,7 @@
  *
  * Return: pointer to destination
  */
-unsigned int *_strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i;
 	unsigned int j;
