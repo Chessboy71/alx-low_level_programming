@@ -1,6 +1,21 @@
 #include "main.h"
 
 /**
+ * _strlen_recursion - prints a string
+ * @s: the string to get the length
+ *
+ * Return: nothing
+ */
+int _strlen_recursion(char *s)
+{
+	if (*s)
+	{
+		return (_strlen_recursion(s + 1) + 1);
+	}
+	else
+		return (0);
+}
+/**
  * _puts_recursion - prints a string
  * @s: the string to print
  *
@@ -8,16 +23,10 @@
  */
 void _print_rev_recursion(char *s)
 {
-	char *str = s + 10000;
-
-	if (str = > s && *str)
+	if (*s)
 	{
-		_putchar(*str);
-		_print_rev_recursion(str - 1);
-	}
-	else if (str > s)
-	{
-		_print_rev_recursion(str - 1);
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
 	else
 	{
