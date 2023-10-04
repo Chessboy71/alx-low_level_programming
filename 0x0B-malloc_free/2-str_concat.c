@@ -34,15 +34,13 @@ char *str_concat(char *s1, char *s2)
 	int s1len, s2len, i;
 	char *newstr;
 
-	if (s1 == NULL && s2 == NULL)
-		return ("");
-	else if (s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
 	else if (s2 == NULL)
 		s2 = "";
 	s1len = _strlen(s1);
 	s2len = _strlen(s2);
-	newstr = (char *)malloc((s1len + s2len) * sizeof(char));
+	newstr = (char *)malloc((s1len + s2len) * sizeof(char) + 1);
 	if (newstr == NULL)
 		return (NULL);
 	for (i = 0; i < s1len; i++)
