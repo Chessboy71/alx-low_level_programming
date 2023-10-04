@@ -36,10 +36,10 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	if (s == 0)
-		return (NULL);
 	i = _strlen(str);
 	s = (char *)malloc(_strlen(str) * sizeof(char) + 1);
+	if (s == 0)
+		return (NULL);
 	ret = s;
 	while (i > 0)
 	{
