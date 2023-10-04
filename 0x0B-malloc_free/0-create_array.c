@@ -3,7 +3,8 @@
 #include "main.h"
 
 /**
- * create_array - creates an array of chars, and initializes it with a specific char
+ * create_array - creates an array of chars,
+ * and initializes it with a specific char
  *@size : size of the array
  *@c : the character to initialize
  *
@@ -11,19 +12,17 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	char *arr = ;
+	char *arr;
 	unsigned int i;
 
 	if (size == 0)
-		return NULL;
+		return (NULL);
 	if ((char *)malloc(size * sizeof(char)) == NULL)
-		return NULL;
-	else
-	{
-		arr = (char *)malloc(size * sizeof(char));
-	}
+		return (NULL);
+	arr = (char *)malloc(size * sizeof(char));
 	for (i = 0; i < size; i++)
 		arr[i] = c;
 	arr[size] = '\0';
 	return (arr);
 }
+
