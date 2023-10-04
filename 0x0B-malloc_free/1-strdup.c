@@ -31,14 +31,15 @@ int _strlen(char *str)
  */
 char *_strdup(char *str)
 {
-	char *ret;
-	int i = _strlen(str);
-	char *s = (char *)malloc(_strlen(str) * sizeof(char) + 1);
+	char *ret, *s;
+	int i;
 
 	if (str == NULL)
 		return (NULL);
 	if (s == 0)
 		return (NULL);
+	i = _strlen(str);
+	*s = (char *)malloc(_strlen(str) * sizeof(char) + 1);
 	ret = s;
 	while (i > 0)
 	{
