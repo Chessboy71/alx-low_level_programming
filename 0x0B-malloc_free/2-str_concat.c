@@ -29,7 +29,7 @@ int _strlen(char *str)
  *
  *Return: void
  */
-char *str_concat(char *s1, char *s2);
+char *str_concat(char *s1, char *s2)
 {
 	int s1len, s2len, i;
 	char *newstr;
