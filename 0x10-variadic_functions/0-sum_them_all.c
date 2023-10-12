@@ -1,4 +1,4 @@
-#include "variadic_function.h"
+#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
 
@@ -10,7 +10,7 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int i;
+	unsigned int i;
 	int count = 0;
 	va_list ptr;
 
