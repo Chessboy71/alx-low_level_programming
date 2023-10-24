@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * pop_listint - frees a linked list
+ * delete_nodeint_at_index - frees a linked list
  * @head: listint_t list to be freed
+ * @index: the index where to delete
  *
  * Return: the number n of the deleted node
  */
