@@ -1,22 +1,22 @@
 #include "lists.h"
 
 /**
- * free_listint2 - frees a linked list
+ * pop_listint - frees a linked list
  * @head: listint_t list to be freed
+ *
+ * Return: the number n of the deleted node
  */
 int pop_listint(listint_t **head)
 {
 	listint_t *tmp;
 	int n;
 
-	if (head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
-	else
-	{
-		tmp = *head;
-		*head = tmp->next;
-		n = tmp->n;
-		free(tmp);
-		return (n);
-	}
+
+	tmp = *head;
+	*head = tmp->next;
+	n = tmp->n;
+	free(tmp);
+	return (n);
 }
