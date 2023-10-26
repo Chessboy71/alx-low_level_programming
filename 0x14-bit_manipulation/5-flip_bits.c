@@ -4,7 +4,7 @@
  * flip_bits - calculates the number of bits that flip
  *
  * @n : teh first number
- * @index: the second number
+ * @m: the second number
  *
  * Return: the number of bits that are different
  *
