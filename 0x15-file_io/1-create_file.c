@@ -5,7 +5,6 @@
  *
  * Return: Always 0.
  */
-
 int _strlen(char *str)
 {
 	int n = 0;
@@ -20,12 +19,12 @@ int _strlen(char *str)
 }
 
 /**
- * read_textfile - converts a binary to uint
+ * create_file - creates file
  *
  * @filename : the filename to start
- * @letters : the text to be output
+ * @text_content : the text to be output
  *
- * Return: the outputed text
+ * Return: IDK
  */
 
 int create_file(const char *filename, char *text_content)
@@ -35,11 +34,11 @@ int create_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	f = open (filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 	if (f == -1)
 		return (-1);
 	if (len)
 		res = write(f, text_content, len);
-	close (f);
+	close(f);
 	return (res == len ? 1 : -1);
 }
