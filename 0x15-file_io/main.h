@@ -6,6 +6,7 @@
 #include <limits.h>
 #include <unistd.h>
 #include <fcntl.h>
+#define READ_BUFF_SIZE 1024
 
 int _putchar(char c);
 ssize_t read_textfile(const char *filename, size_t letters);
