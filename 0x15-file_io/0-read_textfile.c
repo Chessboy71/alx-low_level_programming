@@ -3,8 +3,10 @@
 /**
  * read_textfile - converts a binary to uint
  *
- * @b : the string
- * Return: the converted number or 0 if failed
+ * @filename : the filename to start
+ * @letters : the text to be output
+ *
+ * Return: the outputed text
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
