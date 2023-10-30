@@ -1,27 +1,38 @@
 #include "main.h"
-/**
- * create_file - creates file
- *
- * @filename : the filename to start
- * @text_content : the text to be output
- *
- * Return: IDK
- */
 
+/**
+ * create_file - creates a file
+ * @filename: filename.
+ * @text_content: content writed in the file.
+ *
+ * Return: 1 if it success. -1 if it fails.
+ */
 int create_file(const char *filename, char *text_content)
 {
-	int f;
-	ssize_t res = 0, len;
+	int fd;
+	int nletters;
+	int rwr;
 
 	if (!filename)
 		return (-1);
-	f = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (f == -1)
+
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+
+	if (fd == -1)
 		return (-1);
-	for (len = 0; text_content[len]; len++)
+
+	if (!text_content)
+		text_content = "";
+
+	for (nletters = 0; text_content[nletters]; nletters++)
 		;
-	if (len)
-		res = write(f, text_content, len);
-	close(f);
-	return (res == len ? 1 : -1);
+
+	rwr = write(fd, text_content, nletters);
+
+	if (rwr == -1)
+		return (-1);
+
+	close(fd);
+
+	return (1);
 }
